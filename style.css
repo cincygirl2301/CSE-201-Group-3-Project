@@ -17,3 +17,14 @@
 	width: 100%;
 	height: 100vh;
 }
+
+.column {
+	float: left;
+	width: 33.33%;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
