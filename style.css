@@ -24,8 +24,19 @@
 	font-size: 0.75em;
 }
 
+.1column {
+	float: center;
+	width: 33.33%;
+	font-size: 0.75em;
+}
+
 .row::after {
 	content: "";
 	clear: both;
 	display: table;
+}
+
+img {
+	height: 300px;
+	width: 450px;
 }
