@@ -21,6 +21,7 @@
 .column {
 	float: left;
 	width: 33.33%;
+	font-size: 0.75em;
 }
 
 .row::after {
