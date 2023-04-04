@@ -2,6 +2,7 @@
 <!doctype html> <html>
 <head>
     <title> TravelGuide </title>
+	<!-- The chunk beginning here will be on every page -->
         <link rel=stylesheet href="style.css">
         </head>
 		<body>
@@ -39,9 +40,15 @@
 </ul>
 
 <div class="topnav">
+  <label for="sorting">Sort by</label>
+  <select name="sorting" id="sorting">
+		<option value="continent">Continent</option>
+		<option value="price">Price</option>
+		<option value="popularity">Popularity</option>
+  </select>
   <a class="active" href="TravelGuide.html">Home</a>
   <a href="About.html">About</a>
-  <a href="Contact.html">Contact</a>
+  <a href="#contact">Contact</a>
   <div class="search-container">
     <form action="/action_page.php">
       <input type="text" placeholder="Search.." name="search">
@@ -52,6 +59,7 @@
 
 		<div style="margin-left:25%;margin-top: 47px;position:fixed;padding:1px 16px;height:100%;overflow:auto;">
 			<div class = "CountryList">
+			<!-- The chunk that will be on every page ends here -->
 				<div class="Banner">
 				<h1>Guidance for any people who love travelling!</h1>
 				<h2>The journey of a thousand miles begins with a single step.</h2>

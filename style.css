@@ -1,4 +1,6 @@
 body {
+	background-image: url("airplanebackgroundimage.png");
+    background-repeat: repeat;
 	overflow:auto;
     margin: 0;
     padding: 0;
@@ -40,8 +42,9 @@ img {
 ul {
   margin-top: 47px;
   padding: 0;
-  width: 25%;
-  background-color: #ffffff;
+  width: 20%;
+  background-color: #000;
+  color: white;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -49,7 +52,7 @@ ul {
 
 li a {
   display: block;
-  color: #000;
+  color: white;
   font-size; 20px;
   padding: 10px 50px;
   text-decoration: none;
@@ -81,13 +84,33 @@ li a:hover:not(.active) {
   font-size: 20px;
 }
 
+.topnav label {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 20px;
+}
+
+.topnav select {
+  background-color: black;
+  text-decoration: underline;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 20px;
+}
+
 .topnav a:hover {
   background-color: #00f;
   color: white;
 }
 
-.topnav a.active {
-  background-color: black;
+.topnav select:hover {
+  background-color: #00f;
   color: white;
 }
 
