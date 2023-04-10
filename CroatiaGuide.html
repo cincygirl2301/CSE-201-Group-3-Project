@@ -114,6 +114,25 @@
 					document.getElementById("countryList").innerHTML = popularity;
 				}
 			}
+			
+			var countries = ["Australia", "Brazil", "Canada", "China", "Croatia","England","Egypt","France","Greece","Indonesia","Ireland","Italy","Germany","Jamaica","Japan","Korea","Mexico","Morocco","Netherlands","New Zealand","Peru","Singapore","South Africa","Spain","Sri Lanka","Switzerland","Sweden","Thailand","Turkey"];
+
+            function search() {
+            var input = document.getElementById("searchbar").value;
+            var found = false;
+
+            for (var i = 0; i < countries.length; i++) {
+            if (input.toLowerCase() == countries[i].toLowerCase()) {
+            window.location.href = countries[i] + "Guide.html";
+            found = true;
+            break;
+            }
+            }
+
+            if (!found) {
+            alert("Invalid input, please enter a correct name!");
+            }
+            }
 		</script>
 </head>
 <body>
@@ -159,7 +178,15 @@
 		<a class="active" href="TravelGuide.html">Home</a>
 		<a href="About.html">About</a>
 		<a href="#contact">Contact</a>
+		<div class="search-container">
+			<form action="javascript:void(0);" id="search">
+				<button type="button" onclick="search()">Search</button>
+				<input type="text" placeholder="Enter a country name" name="search-input" id="searchbar" onkeypress="if(event.keyCode==13){search();}">
+			</form>
+		</div>
 	</div>
+	<div style="margin-left:25%;margin-top: 47px;position:fixed;padding:1px 16px;height:100%;overflow:auto;">
+		<div class = "CountryList">
 	<!-- The chunk that will be on every page ends here -->
 
 <div style="margin-left:25%;margin-top: 47px;position:fixed;padding:1px 16px; height: 90%;overflow:auto;">
