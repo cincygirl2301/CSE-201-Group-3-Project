@@ -1,0 +1,271 @@
+<!-- Rachel Jones 04/25/2023-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>SwitzerlandGuide</title>
+<!-- The chunk beginning here will be on every page -->
+        <link rel=stylesheet href="style.css">
+		<script>
+			function sortList() {
+				var continent = [
+					'<li><a href = "EgyptGuide.html">Egypt</a></li>',
+					'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
+					'<li><a href = "SouthAfricaGuide.html">South Africa</a></li>',
+					'<li><a href = "ChinaGuide.html">China</a></li>',
+					'<li><a href = "IndonesiaGuide.html">Indonesia</a></li>',
+					'<li><a href = "JapanGuide.html">Japan</a></li>',
+					'<li><a href = "KoreaGuide.html">Korea</a></li>',
+					'<li><a href = "MalaysiaGuide.html">Malaysia</a></li>',
+					'<li><a href = "SingaporeGuide.html">Singapore</a></li>',
+					'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>',
+					'<li><a href = "ThailandGuide.html">Thailand</a></li>',
+					'<li><a href = "TurkeyGuide.html">Turkey</a></li>',
+					'<li><a href = "AustraliaGuide.html">Australia</a></li>',
+					'<li><a href = "NewZealandGuide.html">New Zealand</a></li>',
+					'<li><a href = "CroatiaGuide.html">Croatia</a></li>',
+					'<li><a href = "EnglandGuide.html">England</a></li>',
+					'<li><a href = "FranceGuide.html">France</a></li>',
+					'<li><a href = "GreeceGuide.html">Greece</a></li>',
+					'<li><a href = "IrelandGuide.html">Ireland</a></li>',
+					'<li><a href = "ItalyGuide.html">Italy</a></li>',
+					'<li><a href = "GermanyGuide.html">Germany</a></li>',
+					'<li><a href = "NetherlandsGuide.html">Netherlands</a></li>',
+					'<li><a href = "SpainGuide.html">Spain</a></li>',
+					'<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>',
+					'<li><a href = "SwedenGuide.html">Sweden</a></li>',
+					'<li><a href = "CanadaGuide.html">Canada</a></li>',
+					'<li><a href = "JamaicaGuide.html">Jamaica</a></li>',
+					'<li><a href = "MexicoGuide.html">Mexico</a></li>',
+					'<li><a href = "BrazilGuide.html">Brazil</a></li>',
+					'<li><a href = "PeruGuide.html">Peru</a></li>'
+				].join('');
+				var price = [
+					'<li><a href = "AustraliaGuide.html">Australia</a></li>',
+					'<li><a href = "FranceGuide.html">France</a></li>',
+					'<li><a href = "EnglandGuide.html">England</a></li>',
+					'<li><a href = "ItalyGuide.html">Italy</a></li>',
+					'<li><a href = "MexicoGuide.html">Mexico</a></li>',
+					'<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>',
+					'<li><a href = "CanadaGuide.html">Canada</a></li>',
+					'<li><a href = "JamaicaGuide.html">Jamaica</a></li>',
+					'<li><a href = "NetherlandsGuide.html">Netherlands</a></li>',
+					'<li><a href = "NewZealandGuide.html">New Zealand</a></li>',
+					'<li><a href = "ChinaGuide.html">China</a></li>',
+					'<li><a href = "SingaporeGuide.html">Singapore</a></li>',
+					'<li><a href = "IrelandGuide.html">Ireland</a></li>',
+					'<li><a href = "GermanyGuide.html">Germany</a></li>',
+					'<li><a href = "SwedenGuide.html">Sweden</a></li>',
+					'<li><a href = "JapanGuide.html">Japan</a></li>',
+					'<li><a href = "GreeceGuide.html">Greece</a></li>',
+					'<li><a href = "KoreaGuide.html">Korea</a></li>',
+					'<li><a href = "BrazilGuide.html">Brazil</a></li>',
+					'<li><a href = "MalaysiaGuide.html">Malaysia</a></li>',
+					'<li><a href = "PeruGuide.html">Peru</a></li>',
+					'<li><a href = "CroatiaGuide.html">Croatia</a></li>',
+					'<li><a href = "IndonesiaGuide.html">Indonesia</a></li>',
+					'<li><a href = "ThailandGuide.html">Thailand</a></li>',
+					'<li><a href = "SouthAfricaGuide.html">South Africa</a></li>',
+					'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
+					'<li><a href = "TurkeyGuide.html">Turkey</a></li>',
+					'<li><a href = "SpainGuide.html">Spain</a></li>',
+					'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>',
+					'<li><a href = "EgyptGuide.html">Egypt</a></li>'
+				].join('');
+				var popularity = [
+					'<li><a href = "FranceGuide.html">France</a></li>',
+					'<li><a href = "SpainGuide.html">Spain</a></li>',
+					'<li><a href = "ChinaGuide.html">China</a></li>',
+					'<li><a href = "ItalyGuide.html">Italy</a></li>',
+					'<li><a href = "TurkeyGuide.html">Turkey</a></li>',
+					'<li><a href = "MexicoGuide.html">Mexico</a></li>',
+					'<li><a href = "ThailandGuide.html">Thailand</a></li>',
+					'<li><a href = "GermanyGuide.html">Germany</a></li>',
+					'<li><a href = "EnglandGuide.html">England</a></li>',
+					'<li><a href = "JapanGuide.html">Japan</a></li>',
+					'<li><a href = "GreeceGuide.html">Greece</a></li>',
+					'<li><a href = "MalaysiaGuide.html">Malaysia</a></li>',
+					'<li><a href = "CanadaGuide.html">Canada</a></li>',
+					'<li><a href = "NetherlandsGuide.html">Netherlands</a></li>',
+					'<li><a href = "KoreaGuide.html">Korea</a></li>',
+					'<li><a href = "CroatiaGuide.html">Croatia</a></li>',
+					'<li><a href = "IndonesiaGuide.html">Indonesia</a></li>',
+					'<li><a href = "BrazilGuide.html">Brazil</a></li>',
+					'<li><a href = "SingaporeGuide.html">Singapore</a></li>',
+					'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
+					'<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>',
+					'<li><a href = "EgyptGuide.html">Egypt</a></li>',
+					'<li><a href = "IrelandGuide.html">Ireland</a></li>',
+					'<li><a href = "SouthAfricaGuide.html">South Africa</a></li>',
+					'<li><a href = "AustraliaGuide.html">Australia</a></li>',
+					'<li><a href = "SwedenGuide.html">Sweden</a></li>',
+					'<li><a href = "JamaicaGuide.html">Jamaica</a></li>',
+					'<li><a href = "PeruGuide.html">Peru</a></li>',
+					'<li><a href = "NewZealandGuide.html">New Zealand</a></li>',
+					'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>'
+				].join('');
+				var element = document.getElementById("sorting");
+				var val = element.options[element.selectedIndex].value;
+				if (val == "continent") {
+					document.getElementById("countryList").innerHTML = continent;
+				} else if (val == "price") {
+					document.getElementById("countryList").innerHTML = price;
+				} else if (val == "popularity") {
+					document.getElementById("countryList").innerHTML = popularity;
+				}
+			}
+			
+			var countries = ["Australia", "Brazil", "Canada", "China", "Croatia","England","Egypt","France","Greece","Indonesia","Ireland","Italy","Germany","Jamaica","Japan","Korea","Mexico","Morocco","Netherlands","New Zealand","Peru","Singapore","South Africa","Spain","Sri Lanka","Switzerland","Sweden","Thailand","Turkey"];
+
+            function search() {
+            var input = document.getElementById("searchbar").value;
+            var found = false;
+
+            for (var i = 0; i < countries.length; i++) {
+            if (input.toLowerCase() == countries[i].toLowerCase()) {
+            window.location.href = countries[i] + "Guide.html";
+            found = true;
+            break;
+            }
+            }
+
+            if (!found) {
+            alert("Invalid input, please enter a correct name!");
+            }
+            }
+		</script>
+</head>
+<body>
+	<ul id="countryList">
+		<li><a href = "AustraliaGuide.html">Australia</a></li>
+		<li><a href = "BrazilGuide.html">Brazil</a></li>
+		<li><a href = "CanadaGuide.html">Canada</a></li>
+		<li><a href = "ChinaGuide.html">China</a></li>
+		<li><a href = "CroatiaGuide.html">Croatia</a></li>
+		<li><a href = "EnglandGuide.html">England</a></li>
+		<li><a href = "EgyptGuide.html">Egypt</a></li>
+		<li><a href = "FranceGuide.html">France</a></li>
+		<li><a href = "GreeceGuide.html">Greece</a></li>
+		<li><a href = "IndonesiaGuide.html">Indonesia</a></li>
+		<li><a href = "IrelandGuide.html">Ireland</a></li>
+		<li><a href = "ItalyGuide.html">Italy</a></li>
+		<li><a href = "GermanyGuide.html">Germany</a></li>
+		<li><a href = "JamaicaGuide.html">Jamaica</a></li>
+		<li><a href = "JapanGuide.html">Japan</a></li>
+		<li><a href = "KoreaGuide.html">Korea</a></li>
+		<li><a href = "MalaysiaGuide.html">Malaysia</a></li>
+		<li><a href = "MexicoGuide.html">Mexico</a></li>
+		<li><a href = "MoroccoGuide.html">Morocco</a></li>
+		<li><a href = "NetherlandsGuide.html">Netherlands</a></li>
+		<li><a href = "NewZealandGuide.html">New Zealand</a></li>
+		<li><a href = "PeruGuide.html">Peru</a></li>
+		<li><a href = "SingaporeGuide.html">Singapore</a></li>
+		<li><a href = "SouthAfricaGuide.html">South Africa</a></li>
+		<li><a href = "SpainGuide.html">Spain</a></li>
+		<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>
+		<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>
+		<li><a href = "SwedenGuide.html">Sweden</a></li>
+		<li><a href = "ThailandGuide.html">Thailand</a></li>
+		<li><a href = "TurkeyGuide.html">Turkey</a></li>
+	</ul>
+	<div class="topnav">
+		<button onclick="sortList()">Sort by</button>
+		<select name="sorting" id="sorting">
+			<option value="continent">Continent</option>
+			<option value="price">Price</option>
+			<option value="popularity">Popularity</option>
+		</select>
+		<a class="active" href="TravelGuide.html">Home</a>
+		<a href="About.html">About</a>
+		<div class="search-container">
+			<form action="javascript:void(0);" id="search">
+				<button type="button" onclick="search()">Search</button>
+				<input type="text" placeholder="Enter a country name" name="search-input" id="searchbar" onkeypress="if(event.keyCode==13){search();}">
+			</form>
+		</div>
+	</div>
+	<!-- The chunk that will be on every page ends here -->
+
+<div style="margin-left:25%;margin-top: 47px;position:fixed;padding:1px 16px; height: 90%;overflow:auto;">
+<div class = "CountryList">
+
+	<h1>Some Facts about Switzerland</h1>
+	<p>Switzerland is a small landlocked country located in central Europe, with a population of 
+		approximately 8.5 million people. It is known for its stunning alpine scenery, high 
+		standard of living, and political neutrality. The country has four official languages: 
+		German, French, Italian, and Romansh. Switzerland is famous for its banked and financial 
+		services, as well as its precision manufacturing industries. The country is also known for 
+		its chocolate, cheese, and watches. Switzerland is a federal republic with a direct democratic 
+		political system, meaning citizens have a high level of participation in decison-making. The 
+		country is home to many international organizations, including the United Nations, the 
+		International Committee of the Red Cross, and the World Health Organization. Switzerland is 
+		also a popular tourist destination, with attractions such as the Matterhorn, Lake Geneva, 
+		and the city of Zurich.
+	</p>
+	
+	<p><strong>Average Amount of Money Spent By Tourists</strong></p>
+	<p>Zurich</p>
+	<ul>
+		<li>Budget: $91 / day per person</li>
+		<li>Mid-Range: $210 /  day per person</li>
+		<li>High-Range: $474 / day per person</li>
+	</ul>
+	<p>Geneva</p>
+	<ul>
+		<li>Budget: $71 / day per person</li>
+		<li>Mid-Range: $165 /  day per person</li>
+		<li>High-Range: $346 / day per person</li>
+	</ul>
+
+	<h1>Popular Cities in Switzerland</h1>
+<br>
+<h3>Places to Visit in Zurich</h3>
+<br>
+<div class = "row">
+	<div class = "1column">
+		<img src = "Images/Switzerland/SwissNationalMuseum.jpg" alt = "Swiss National Museum">
+		<h4>Swiss National Museum</h4>
+        <p>This museum is dedicated to Switzerland's entire history all the way up to the present day.</p>
+	</div>
+	<div class = "1column">
+		<img src = "Images/Switzerland/Grossmunster.jpg" alt = "Grossmunster">
+        <h4>Grossmunster</h4>
+		<p>This Protestant church was built in 1220 and is one of four major churches in Zurich.</p>
+	</div>
+	<div class = "1column">
+		<img src = "Images/Switzerland/ZurichZoo.jpg" alt = "Zurich Zoo">
+        <h4>Zurich Zoo</h4>
+		<p>This zoo contains 300 species of animals, with its main attraction being the Asian 
+			elephants and Masoala Hall.
+		</p>
+	</div>
+</div>
+<br>
+<h3>Places to Visit in Geneva</h3>
+<br>
+<div class = "row">
+	<div class = "1column">
+		<img src = "Images/Switzerland/StPierreCathedral.jpg" alt = "St. Pierre Cathedral">
+        <h4>St. Pierre Cathedral</h4>
+		<p>This gothic-style church was built in the 12th century and was converted into a 
+			Reformed Protestant church from a Roman Catholic cathedral.
+		</p>
+	</div>
+	<div class = "1column">
+		<img src = "Images/Switzerland/GenevaBotanicalGardenAndGreenhouse.jpg" alt = "Geneva Botanical Garden and Greenhouse">
+        <h4>Geneva Botanical Garden and Greenhouse</h4>
+		<p>This greenhouse contains over 12,000 species of plants from around the world 
+			and contains a historical herbarium with about 6 million botanical specimens.
+		</p>
+	</div>
+	<div class = "1column">
+		<img src = "Images/Switzerland/GenevaWaterFountain.jpg" alt = "The Geneva Water Fountain">
+        <h4>The Geneva Water Fountain</h4>
+		<p>This water fountain was built in 1886 to release excess pressure from the 
+			hydraulic plant and shoot water up to 460 feet into the air.
+		</p>
+	</div>
+</div>
+</div>
+
+</body>
+</html>
