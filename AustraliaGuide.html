@@ -6,7 +6,11 @@
 <!-- The chunk beginning here will be on every page -->
         <link rel=stylesheet href="style.css">
 		<script>
+
+			// Javascript function for our sorting mechanic
 			function sortList() {
+				
+				// Sorts country web page list in order of continents
 				var continent = [
 					'<li><a href = "EgyptGuide.html">Egypt</a></li>',
 					'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
@@ -39,6 +43,8 @@
 					'<li><a href = "BrazilGuide.html">Brazil</a></li>',
 					'<li><a href = "PeruGuide.html">Peru</a></li>'
 				].join('');
+				
+				// Sorts country web page list in order of most to least expensive to visit
 				var price = [
 					'<li><a href = "AustraliaGuide.html">Australia</a></li>',
 					'<li><a href = "FranceGuide.html">France</a></li>',
@@ -71,6 +77,8 @@
 					'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>',
 					'<li><a href = "EgyptGuide.html">Egypt</a></li>'
 				].join('');
+				
+				// Sorts country web page list in order of most to least popular
 				var popularity = [
 					'<li><a href = "FranceGuide.html">France</a></li>',
 					'<li><a href = "SpainGuide.html">Spain</a></li>',
@@ -114,27 +122,31 @@
 				}
 			}
 			
+			// Javascript variable that contains list of countries
 			var countries = ["Australia", "Brazil", "Canada", "China", "Croatia","England","Egypt","France","Greece","Indonesia","Ireland","Italy","Germany","Jamaica","Japan","Korea","Mexico","Morocco","Netherlands","New Zealand","Peru","Singapore","South Africa","Spain","Sri Lanka","Switzerland","Sweden","Thailand","Turkey"];
 
+			// Javascript function for our search bar
             function search() {
-            var input = document.getElementById("searchbar").value;
-            var found = false;
+            	var input = document.getElementById("searchbar").value;
+            	var found = false;
 
-            for (var i = 0; i < countries.length; i++) {
-            if (input.toLowerCase() == countries[i].toLowerCase()) {
-            window.location.href = countries[i] + "Guide.html";
-            found = true;
-            break;
-            }
-            }
+            	for (var i = 0; i < countries.length; i++) {
+            		if (input.toLowerCase() == countries[i].toLowerCase()) {
+            			window.location.href = countries[i] + "Guide.html";
+            			found = true;
+            			break;
+            		}
+            	}	
 
-            if (!found) {
-            alert("Invalid input, please enter a correct name!");
-            }
+				// If user input is not found, user is alerted
+            	if (!found) {
+            		alert("Invalid input, please enter a correct name!");
+            	}
             }
 		</script>
 </head>
 <body>
+	<!-- Unordered list of links to different country web pages -->
 	<ul id="countryList">
 		<li><a href = "AustraliaGuide.html">Australia</a></li>
 		<li><a href = "BrazilGuide.html">Brazil</a></li>
@@ -167,6 +179,8 @@
 		<li><a href = "ThailandGuide.html">Thailand</a></li>
 		<li><a href = "TurkeyGuide.html">Turkey</a></li>
 	</ul>
+
+	<!-- Navigation bar that holds the sort button, home and about buttons, and search bar -->
 	<div class="topnav">
 		<button onclick="sortList()">Sort by</button>
 		<select name="sorting" id="sorting">
@@ -189,14 +203,20 @@
 	<div class = "CountryList">
 		
 	<h1>Some Facts About Australia</h1>
+
+	<!-- Paragraph contains facts of above mentioned country -->
 	<p>Australia is the smallest continent while also being the largest country in the world and has a population of approximately 26 
 		million people (as of 2023). 85%-90% of this population lives on the coast due to its milder climate and most of central 
 		Australia being a desert. This country has no official language (English is considered their de facto language but it is 
 		not stated in their constitution). 80% of the animals found in Australia are unique to this country and you won't find 
 		there natural habitat anywhere else in the world.
 	</p>
-		
 	
+	<!-- 
+		Section of unordered lists about average amount of money 
+		spent by tourists in respective cities and  budget ranges 
+	-->
+	<p><strong>Average Amount of Money Spent By Tourists</strong></p>
 	<p>Sydney</p>
 	<ul>
 		<li>Budget: $81 / day per person</li>
@@ -216,13 +236,18 @@
 		<li>High-End: $355 / day per person</li>
 	</ul>
 		
+	<!-- Popular cities and attractions section -->
 	<h1>Popular Cities in Australia</h1>
 	<br>
 	<h3>Places to Visit in Sydney</h3>
 	<br>
 	<div class = "row">
+
+		<!-- Div that formats attraction image in center of page -->
 		<div class = "1column">
 			<img src = "Images/Australia/SydneyOperaHouse.jpg" alt = "Sydney Opera House">
+			
+			<!-- Displays google map location of attraction -->
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.275722844997!2d151.21529669999998!3d-33.856784399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae665e892fdd%3A0x3133f8d75a1ac251!2sSydney%20Opera%20House!5e0!3m2!1sen!2sus!4v1682342292061!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			<h4>Sydney Opera House</h4>
 			<p>The Sydney Opera House is an arts center with seven venues located on the Sydney Harbour.
