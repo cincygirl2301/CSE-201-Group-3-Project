@@ -7,7 +7,11 @@
 <!-- The chunk beginning here will be on every page -->
         <link rel=stylesheet href="style.css">
 		<script>
+
+			// Javascript function for our sorting mechanic
 			function sortList() {
+				
+				// Sorts country web page list in order of continents
 				var continent = [
 					'<li><a href = "EgyptGuide.html">Egypt</a></li>',
 					'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
@@ -40,6 +44,8 @@
 					'<li><a href = "BrazilGuide.html">Brazil</a></li>',
 					'<li><a href = "PeruGuide.html">Peru</a></li>'
 				].join('');
+
+				// Sorts country web page list in order of most to least expensive to visit
 				var price = [
 					'<li><a href = "AustraliaGuide.html">Australia</a></li>',
 					'<li><a href = "FranceGuide.html">France</a></li>',
@@ -72,6 +78,8 @@
 					'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>',
 					'<li><a href = "EgyptGuide.html">Egypt</a></li>'
 				].join('');
+
+				// Sorts country web page list in order of most to least popular
 				var popularity = [
 					'<li><a href = "FranceGuide.html">France</a></li>',
 					'<li><a href = "SpainGuide.html">Spain</a></li>',
@@ -115,27 +123,32 @@
 				}
 			}
 			
+			// Javascript variable that contains list of countries
 			var countries = ["Australia", "Brazil", "Canada", "China", "Croatia","England","Egypt","France","Greece","Indonesia","Ireland","Italy","Germany","Jamaica","Japan","Korea","Mexico","Morocco","Netherlands","New Zealand","Peru","Singapore","South Africa","Spain","Sri Lanka","Switzerland","Sweden","Thailand","Turkey"];
 
+			// Javascript function for our search bar
             function search() {
-            var input = document.getElementById("searchbar").value;
-            var found = false;
+            	var input = document.getElementById("searchbar").value;
+            	var found = false;
 
-            for (var i = 0; i < countries.length; i++) {
-            if (input.toLowerCase() == countries[i].toLowerCase()) {
-            window.location.href = countries[i] + "Guide.html";
-            found = true;
-            break;
-            }
-            }
+            	for (var i = 0; i < countries.length; i++) {
+            		if (input.toLowerCase() == countries[i].toLowerCase()) {
+            			window.location.href = countries[i] + "Guide.html";
+            			found = true;
+            			break;
+            		}
+            	}
 
-            if (!found) {
-            alert("Invalid input, please enter a correct name!");
-            }
+				// If user input is not found, user is alerted
+            	if (!found) {
+            		alert("Invalid input, please enter a correct name!");
+            	}
             }
 		</script>
 </head>
 <body>
+
+	<!-- Unordered list of links to different country web pages -->
 	<ul id="countryList">
 		<li><a href = "AustraliaGuide.html">Australia</a></li>
 		<li><a href = "BrazilGuide.html">Brazil</a></li>
@@ -168,6 +181,8 @@
 		<li><a href = "ThailandGuide.html">Thailand</a></li>
 		<li><a href = "TurkeyGuide.html">Turkey</a></li>
 	</ul>
+
+	<!-- Navigation bar that holds the sort button, home and about buttons, and search bar -->
 	<div class="topnav">
 		<button onclick="sortList()">Sort by</button>
 		<select name="sorting" id="sorting">
@@ -189,13 +204,19 @@
 <div style="margin-left:25%;margin-top: 47px;position:fixed;padding:1px 16px; height: 90%;overflow:auto;">
 <div class = "CountryList">
 	
+<!-- Paragraph contains facts of above mentioned country -->
 <h1>Some Facts About Canada</h1>
 <p>Canada is the second largest country in the world with a total area of over 9 million square kilometers. This
 	country takes up two-fifths of the North American continent, but even with its large size it is one of the 
 	most sparsely populated countries in the world. Canada's official language is French and English and its population 
 	is over 37 million people.
-	</p>
-	
+</p>
+
+	<!-- 
+		Section of unordered lists about average amount of money 
+		spent by tourists in respective cities and  budget ranges 
+	-->
+<p><strong>Average Amount of Money Spent By Tourists</strong></p>
 <p>Banff</p>
 <ul>
 	<li>Budget: $29 / day per person</li>
@@ -215,20 +236,25 @@
 	<li>High-End: $335 / day per person</li>
 </ul>
 	
+<!-- Popular cities and attractions section -->
 <h1>Popular Cities in Canada</h1>
 <br>
 <h3>Places to Visit in Banff</h3>
 <br>
 <div class = "row">
+
+	<!-- Div that formats attraction image in center of page -->
 	<div class = "1column">
-		<img src = "Images/Canada/CaveBasinSite.jpg" alt = "Cave Basin Site" style = "height: 80% width: 75%">
+		<img src = "Images/Canada/CaveBasinSite.jpg" alt = "Cave Basin Site">
+
+		<!-- Displays google map location of attraction -->
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.7134942956222!2d-115.5915223!3d51.1690712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5370ca6b9ae405bf%3A0xa9b292141d3c34d2!2sCave%20and%20Basin%20National%20Historic%20Site!5e0!3m2!1sen!2sus!4v1682343170388!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Cave and Basin National Historic Site</h4>
 		<p>This site is located in the Canadian Rocky Mountains at the thermal mineral springs.
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/Canada/LakeMinnewanka.jpg" alt = "Lake Minnewanka" style = "width: 75%">
+		<img src = "Images/Canada/LakeMinnewanka.jpg" alt = "Lake Minnewanka">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d159806.36700950752!2d-115.37545909999996!3d51.25637915000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5370d2948efafecd%3A0x648548874b447ec6!2sLake%20Minnewanka!5e0!3m2!1sen!2sus!4v1682343208627!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Lake Minnewanka</h4>
 		<p>This lake was known to the First Nations people as Minn-waki or “lake of the spirits” and can be 
@@ -241,14 +267,14 @@
 <br>
 <div class = "row">
 	<div class = "1column">
-		<img src = "Images/Canada/NotreDameBasilica.jpg" alt = "Notre-Dame Basilica" style = "height: 100% width: 100%">
+		<img src = "Images/Canada/NotreDameBasilica.jpg" alt = "Notre-Dame Basilica">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.2758494499653!2d-73.5561204!3d45.5045254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a575897713d%3A0x1ffcef9f1d0d96aa!2sNotre-Dame%20Basilica%20of%20Montreal!5e0!3m2!1sen!2sus!4v1682343241840!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Notre-Dame Basilica of Montreal</h4>
 		<p>This was the first Gothic revival style church to be built in Canada.
 		</p>
 	</div>
 	<div class = "column">
-		<img src = "Images/Canada/Biodome.jpg" alt = "Biodome" style = "width: 75%">
+		<img src = "Images/Canada/Biodome.jpg" alt = "Biodome">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.536216868595!2d-73.5497189!3d45.55965450000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91c0d04c267b1%3A0x1cc677ac9fbe265b!2sBiodome!5e0!3m2!1sen!2sus!4v1682343268821!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Biodome</h4>
 		<p>This facility allows you to walk through replicas of different ecosystems found in North and South America.
@@ -260,14 +286,14 @@
 <br>
 <div class = "row">
 	<div class = "1column">
-		<img src = "Images/Canada/VancouverAquarium.jpg" alt = "Vancouver Aquarium" style = "width: 75%">
+		<img src = "Images/Canada/VancouverAquarium.jpg" alt = "Vancouver Aquarium">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.728416289491!2d-123.1308774!3d49.300487600000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486718d7aca6ca7%3A0x5f251627980ee358!2sVancouver%20Aquarium!5e0!3m2!1sen!2sus!4v1682343303863!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Vancouver Aquarium</h4>
 		<p>The Vancouver Aquarium was the first public aquarium to open in Canada.
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/Canada/CapilanoBridge.jpeg" alt = "Capilano Bridge" style = "width: 75%">
+		<img src = "Images/Canada/CapilanoBridge.jpeg" alt = "Capilano Bridge">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2599.490673388458!2d-123.11492439999999!3d49.3428609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54866fd200dcde49%3A0xf350b3ec85130f5e!2sCapilano%20Suspension%20Bridge%20Park!5e0!3m2!1sen!2sus!4v1682343346038!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Capilano Suspension Bridge Park</h4>
 		<p>This bridge crosses 230 feet above the Capilano River and is 460 feet long.
