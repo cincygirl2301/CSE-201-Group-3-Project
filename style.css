@@ -1,3 +1,10 @@
+:root {
+	--topnav-color: #03a9f4;
+	--sidebar-color: #01cfef;
+	--text-color: white;
+	--active-color: blue;
+}
+
 body {
 	background-image: url("airplanebackgroundimage.png");
     background-repeat: repeat;
@@ -45,67 +52,68 @@ iframe {
 }
 
 #countryList {
-  margin-top: 47px;
+  margin-top: 54px;
   padding: 0;
   width: 15%;
-  background-color: #000;
-  color: white;
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
   position: fixed;
   height: 100%;
-  overflow: auto;
+  overflow: scroll;
+  margin-bottom: 0px;
 }
 
 li a {
   display: block;
-  color: white;
+  color: var(--text-color);
   font-size; 20px;
   padding: 10px 50px;
   text-decoration: none;
 }
 
 li a.active {
-  background-color: blue;
-  color: white;
+  background-color: var(--active-color);
+  color: var(--text-color);
 }
 
 li a:hover:not(.active) {
-  background-color: blue;
-  color: white;
+  background-color: var(--active-color);
+  color: var(--text-color);
 }
 
 .topnav {
   overflow: auto;
   position: fixed;
-  background-color: #000;
+  background-color: var(--topnav-color);
   width: 100%;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: white;
+  color: var(--text-color);
   text-align: center;
   padding: 14px 68px;
   font-size: 20px;
 }
 
 .topnav button {
-  background-color: black;
+  background-color: var(--topnav-color);
   text-decoration: underline;
   float: left;
   display: block;
-  color: white;
+  color: var(--text-color);
   text-align: center;
   padding: 14px 67px;
   font-size: 20px;
 }
 
 .topnav select {
-  background-color: black;
+  background-color: var(--topnav-color);
   text-decoration: underline;
   float: left;
   display: block;
-  color: white;
+  color: var(--text-color);
   text-align: center;
   padding: 14px 67px;
   font-size: 20px;
@@ -115,33 +123,37 @@ li a:hover:not(.active) {
 	float: right;
 }
 
+.topnav .search-container ::placeholder {
+	color: var(--text-color);
+}
+
 .topnav a:hover {
-  background-color: #00f;
-  color: white;
+  background-color: var(--active-color);
+  color: var(--text-color);
 }
 
 .topnav select:hover {
-  background-color: #00f;
-  color: white;
+  background-color: var(--active-color);
+  color: var(--text-color);
 }
 
 .topnav button:hover {
-  background-color: #00f;
-  color: white;
+  background-color: var(--active-color);
+  color: var(--text-color);
 }
 
 .topnav input {
-  background-color: black;
+  background-color: var(--topnav-color);
   text-decoration: underline;
   float: left;
   display: block;
-  color: white;
+  color: var(--text-color);
   text-align: center;
   padding: 14px 16px;
   font-size: 20px;
 }
 
 .topnav input:hover {
-  background-color: #00f;
-  color: white;
+  background-color: var(--active-color);
+  color: var(--text-color);
 }
