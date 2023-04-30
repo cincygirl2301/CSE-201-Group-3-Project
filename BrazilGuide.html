@@ -6,7 +6,11 @@
 <!-- The chunk beginning here will be on every page -->
         <link rel=stylesheet href="style.css">
 		<script>
+
+			// Javascript function for our sorting mechanic
 			function sortList() {
+				
+				// Sorts country web page list in order of continents
 				var continent = [
 					'<li><a href = "EgyptGuide.html">Egypt</a></li>',
 					'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
@@ -39,6 +43,8 @@
 					'<li><a href = "BrazilGuide.html">Brazil</a></li>',
 					'<li><a href = "PeruGuide.html">Peru</a></li>'
 				].join('');
+				
+				// Sorts country web page list in order of most to least expensive to visit
 				var price = [
 					'<li><a href = "AustraliaGuide.html">Australia</a></li>',
 					'<li><a href = "FranceGuide.html">France</a></li>',
@@ -71,6 +77,8 @@
 					'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>',
 					'<li><a href = "EgyptGuide.html">Egypt</a></li>'
 				].join('');
+				
+				// Sorts country web page list in order of most to least popular
 				var popularity = [
 					'<li><a href = "FranceGuide.html">France</a></li>',
 					'<li><a href = "SpainGuide.html">Spain</a></li>',
@@ -114,27 +122,32 @@
 				}
 			}
 			
+			// Javascript variable that contains list of countries
 			var countries = ["Australia", "Brazil", "Canada", "China", "Croatia","England","Egypt","France","Greece","Indonesia","Ireland","Italy","Germany","Jamaica","Japan","Korea","Mexico","Morocco","Netherlands","New Zealand","Peru","Singapore","South Africa","Spain","Sri Lanka","Switzerland","Sweden","Thailand","Turkey"];
 
+			// Javascript function for our search bar
             function search() {
-            var input = document.getElementById("searchbar").value;
-            var found = false;
+            	var input = document.getElementById("searchbar").value;
+            	var found = false;
 
-            for (var i = 0; i < countries.length; i++) {
-            if (input.toLowerCase() == countries[i].toLowerCase()) {
-            window.location.href = countries[i] + "Guide.html";
-            found = true;
-            break;
-            }
-            }
+            	for (var i = 0; i < countries.length; i++) {
+            		if (input.toLowerCase() == countries[i].toLowerCase()) {
+            			window.location.href = countries[i] + "Guide.html";
+            			found = true;
+            			break;
+            		}
+            	}
 
-            if (!found) {
-            alert("Invalid input, please enter a correct name!");
-            }
+				// If user input is not found, user is alerted
+            	if (!found) {
+            		alert("Invalid input, please enter a correct name!");
+            	}
             }
 		</script>
 </head>
 <body>
+
+	<!-- Unordered list of links to different country web pages -->
 	<ul id="countryList">
 		<li><a href = "AustraliaGuide.html">Australia</a></li>
 		<li><a href = "BrazilGuide.html">Brazil</a></li>
@@ -167,6 +180,8 @@
 		<li><a href = "ThailandGuide.html">Thailand</a></li>
 		<li><a href = "TurkeyGuide.html">Turkey</a></li>
 	</ul>
+
+	<!-- Navigation bar that holds the sort button, home and about buttons, and search bar -->
 	<div class="topnav">
 		<button onclick="sortList()">Sort by</button>
 		<select name="sorting" id="sorting">
@@ -188,13 +203,19 @@
 <div style="margin-left:25%;margin-top: 47px;position:fixed;padding:1px 16px; height: 90%;overflow:auto;">
 <div class = "CountryList">
 	
+<!-- Paragraph contains facts of above mentioned country -->	
 <h1>Some Facts About Brazil</h1>
 <p>Brazil is the fifth largest country in the world with a total area of over 8 million square kilometers. This country shares a boarder with 
 	every country in South America execpt Ecuador and Chile. Brazil's official language is Portuguese and has a population of approximately 
 	216 million people 
 	(as of 2023).
 	</p>
-	
+
+	<!-- 
+		Section of unordered lists about average amount of money 
+		spent by tourists in respective cities and  budget ranges 
+	-->
+<p><strong>Average Amount of Money Spent By Tourists</strong></p>
 <p>Rio de Janeiro</p>
 <ul>
 	<li>Budget: $31 / day per person</li>
@@ -214,13 +235,18 @@
 	<li>High-End: $50 / day per person</li>
 </ul>
 	
+<!-- Popular cities and attractions section -->
 <h1>Popular Cities in Brazil</h1>
 <br>
 <h3>Places to Visit in Rio de Janeiro</h3>
 <br>
 <div class = "row">
+
+	<!-- Div that formats attraction image in center of page -->
 	<div class = "1column">
-		<img src = "Images/Brazil/ChristTheRedeemerImage.png" alt = "Christ the Redeemer" style = "height: 80% width: 75%">
+		<img src = "Images/Brazil/ChristTheRedeemerImage.png" alt = "Christ the Redeemer">
+
+		<!-- Displays google map location of attraction -->
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.9541400598087!2d-43.210487199999996!3d-22.951916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997fd5984aa13f%3A0x9dc984d7019502de!2sChrist%20the%20Redeemer!5e0!3m2!1sen!2sus!4v1682342699328!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Christ The Redeemer Statue</h4>
 		<p>This giant statue of Jesus Christ stands on a 26 feet tall pedestal and is 98 feet tall and 92 feet 
@@ -228,7 +254,7 @@
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/Brazil/CopacabanaImage.png" alt = "Copacabana" style = "width: 75%">
+		<img src = "Images/Brazil/CopacabanaImage.png" alt = "Copacabana">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29386.99197251993!2d-43.18575529999998!3d-22.973270799999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd523d20f9c53%3A0x693c6132635e6b0d!2sCopacabana%2C%20Rio%20de%20Janeiro%20-%20State%20of%20Rio%20de%20Janeiro%2C%20Brazil!5e0!3m2!1sen!2sus!4v1682342734604!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Copacabana</h4>
 		<p>Located in the southern part of the city, this beach is 2.5 miles long and is one of the most 
@@ -236,7 +262,7 @@
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/Brazil/RioCarnival2023Image.png" alt = "Rio Carnival 2023" style = "width: 75%">
+		<img src = "Images/Brazil/RioCarnival2023Image.png" alt = "Rio Carnival 2023">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.459017366101!2d-43.18739679999997!3d-22.97014239999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd54090bfd0a3%3A0xf2e8a97fde1fd02d!2sRIO-CARNIVAL!5e0!3m2!1sen!2sus!4v1682342929195!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Rio Carnival 2023</h4>
 		<p>Carnival is a festival held every year before Lent and is one of the biggest carnivals in the world.
@@ -248,25 +274,25 @@
 <br>
 <div class = "row">
 	<div class = "1column">
-		<img src = "Images/Brazil/SaoPauloMuseumOfArt.jpg" alt = "São Paulo Museum of Art" style = "height: 100% width: 100%">
+		<img src = "Images/Brazil/SaoPauloMuseumOfArt.jpg" alt = "São Paulo Museum of Art">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.195696784533!2d-46.6558819!3d-23.561414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59ceb1eb771f%3A0xe904f6a669744da1!2sMuseum%20of%20Art%20of%20S%C3%A3o%20Paulo%20Assis%20Chateaubriand!5e0!3m2!1sen!2sus!4v1682342979681!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>São Paulo Museum of Art</h4>
 		<p>This art museum contains modern art from all over Latin America, Africa, Asia, and Europe.
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/Brazil/MuseuDoFutebol.jpg" alt = "Museu do Futebol" style = "width: 75%">
+		<img src = "Images/Brazil/MuseuDoFutebol.jpg" alt = "Museu do Futebol">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.577550783277!2d-46.665136399999994!3d-23.547691999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5825daacb07f%3A0xcfdec9e87c999ece!2sMuseu%20do%20Futebol!5e0!3m2!1sen!2sus!4v1682343013341!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Museu do Futebol</h4>
 		<p>The Football (soccer) Museum is dedicated to the practice and history of football in Brazil and around the world.
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/Brazil/IbirapueraPark.jpg" alt = "Ibirapuera Park" style = "width: 75%">
+		<img src = "Images/Brazil/IbirapueraPark.jpg" alt = "Ibirapuera Park">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.4715356663773!2d-46.65763359999996!3d-23.58741619999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59f1069d11d1%3A0xcb936109af9ce541!2sIbirapuera%20Park!5e0!3m2!1sen!2sus!4v1682343066115!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Ibirapuera Park</h4>
 		<p>This urban park is the most visited park in South America and is often compared to Central Park in New York City.
-		<p/>
+		</p>
 	</div>
 </div>
 <br>
@@ -274,7 +300,7 @@
 <br>
 <div class = "row">
 	<div class = "1column">
-		<img src = "Images/Brazil/AnavilhanasNationalPark.jpg" alt = "Anavilhanas National Park" style = "width: 25%">
+		<img src = "Images/Brazil/AnavilhanasNationalPark.jpg" alt = "Anavilhanas National Park">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.7258680210425!2d-65.8560664!3d-3.4168320999999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x921c000000008467%3A0x5210a1dfd753ea34!2sAnavilhanas%20National%20Park!5e0!3m2!1sen!2sus!4v1682343103341!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Anavilhanas National Park</h4>
 		<p>This nature reserve protects the Anavilhanas Archipelago in Rio Negro.</p>
