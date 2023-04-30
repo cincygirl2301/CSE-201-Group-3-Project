@@ -7,7 +7,11 @@
 <!-- The chunk beginning here will be on every page -->
         <link rel=stylesheet href="style.css">
 		<script>
+
+			// Javascript function for our sorting mechanic
 			function sortList() {
+
+				// Sorts country web page list in order of continents
 				var continent = [
 					'<li><a href = "EgyptGuide.html">Egypt</a></li>',
 					'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
@@ -40,6 +44,8 @@
 					'<li><a href = "BrazilGuide.html">Brazil</a></li>',
 					'<li><a href = "PeruGuide.html">Peru</a></li>'
 				].join('');
+
+				// Sorts country web page list in order of most to least expensive to visit
 				var price = [
 					'<li><a href = "AustraliaGuide.html">Australia</a></li>',
 					'<li><a href = "FranceGuide.html">France</a></li>',
@@ -72,6 +78,8 @@
 					'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>',
 					'<li><a href = "EgyptGuide.html">Egypt</a></li>'
 				].join('');
+				
+				// Sorts country web page list in order of most to least popular
 				var popularity = [
 					'<li><a href = "FranceGuide.html">France</a></li>',
 					'<li><a href = "SpainGuide.html">Spain</a></li>',
@@ -115,27 +123,32 @@
 				}
 			}
 			
+			// Javascript variable that contains list of countries
 			var countries = ["Australia", "Brazil", "Canada", "China", "Croatia","England","Egypt","France","Greece","Indonesia","Ireland","Italy","Germany","Jamaica","Japan","Korea","Mexico","Morocco","Netherlands","New Zealand","Peru","Singapore","South Africa","Spain","Sri Lanka","Switzerland","Sweden","Thailand","Turkey"];
 
+			// Javascript function for our search bar
             function search() {
-            var input = document.getElementById("searchbar").value;
-            var found = false;
+            	var input = document.getElementById("searchbar").value;
+            	var found = false;
 
-            for (var i = 0; i < countries.length; i++) {
-            if (input.toLowerCase() == countries[i].toLowerCase()) {
-            window.location.href = countries[i] + "Guide.html";
-            found = true;
-            break;
-            }
-            }
+            	for (var i = 0; i < countries.length; i++) {
+            		if (input.toLowerCase() == countries[i].toLowerCase()) {
+            			window.location.href = countries[i] + "Guide.html";
+            			found = true;
+            			break;
+            		}
+            	}
 
-            if (!found) {
-            alert("Invalid input, please enter a correct name!");
-            }
+				// If user input is not found, user is alerted
+            	if (!found) {
+            		alert("Invalid input, please enter a correct name!");
+            	}
             }
 		</script>
 </head>
 <body>
+
+	<!-- Unordered list of links to different country web pages -->
 	<ul id="countryList">
 		<li><a href = "AustraliaGuide.html">Australia</a></li>
 		<li><a href = "BrazilGuide.html">Brazil</a></li>
@@ -168,6 +181,8 @@
 		<li><a href = "ThailandGuide.html">Thailand</a></li>
 		<li><a href = "TurkeyGuide.html">Turkey</a></li>
 	</ul>
+
+	<!-- Navigation bar that holds the sort button, home and about buttons, and search bar -->
 	<div class="topnav">
 		<button onclick="sortList()">Sort by</button>
 		<select name="sorting" id="sorting">
@@ -189,13 +204,19 @@
 <div style="margin-left:25%;margin-top: 47px;position:fixed;padding:1px 16px; height: 90%;overflow:auto;">
 <div class = "CountryList">
 	
+<!-- Paragraph contains facts of above mentioned country -->
 <h1>Some Facts About China</h1>
 <p>China is the largest Asian country with a total area of over 9 million square kilometers. All the people living in this country
 	makes up one-fifth of all humans in the world, with a population of more than 1 billion people. China is one of the few existing 
 	countries in the world that have flourished economically and culturally in its early stages. Little to no outside influences 
 	had a large impact on China’s cultural development (with the expansion of Buddhism coming from India).
 </p>
-			
+	
+<!-- 
+		Section of unordered lists about average amount of money 
+		spent by tourists in respective cities and  budget ranges 
+	-->
+<p><strong>Average Amount of Money Spent By Tourists</strong></p>
 <p>Beijing</p>
 <ul>
 	<li>Budget: $26 / day per person</li>
@@ -215,13 +236,16 @@
 	<li>High-End: $345 / day per person</li>
 </ul>
 	
+<!-- Popular cities and attractions section -->
 <h1>Popular Cities in China</h1>
 <br>
 <h3>Places to Visit in Beijing</h3>
 <br>
 <div class = "row">
+
+	<!-- Div that formats attraction image in center of page -->
 	<div class = "1column">
-		<img src = "Images/China/GreatWall.jpg" alt = "Great Wall of China" style = "height: 80% width: 75%">
+		<img src = "Images/China/GreatWall.jpg" alt = "Great Wall of China">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.958957464021!2d116.57037489999999!3d40.431907700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f121d7687f2ccf%3A0xd040259b950522df!2sGreat%20Wall%20of%20China!5e0!3m2!1sen!2sus!4v1682343392876!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Great Wall of China</h4>
 		<p>The Great Wall of China is a series of connected fortifications and served as protection of Imperial China 
@@ -229,14 +253,14 @@
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/China/PalaceMuseum.jpg" alt = "The Palace Museum" style = "width: 75%">
+		<img src = "Images/China/PalaceMuseum.jpg" alt = "The Palace Museum">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.119373664412!2d116.3971546!3d39.916344699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f052dd9bcd81ab%3A0xde43eaed9b106064!2sThe%20Palace%20Museum!5e0!3m2!1sen!2sus!4v1682343442137!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>The Palace Museum</h4>
 		<p>This museum houses about 700,000 pieces of Chinese artwork and artifacts.
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/China/SummerPalace.jpg" alt = "Summer Palace" style = "width: 75%">
+		<img src = "Images/China/SummerPalace.jpg" alt = "Summer Palace">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.378945619442!2d116.27546059999999!3d39.9999823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3402f8c7b9c38f3f%3A0x45d9b1774c04a132!2sSummer%20Palace!5e0!3m2!1sen!2sus!4v1682343475901!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Summer Palace</h4>
 		<p>This palace was once an imperial garden during the Qing dynasty but was destroyed during the Second Opium War of the 1850’s 
@@ -244,7 +268,7 @@
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/China/TempleOfHeaven.jpg" alt = "Temple of Heaven" style = "width: 75%">
+		<img src = "Images/China/TempleOfHeaven.jpg" alt = "Temple of Heaven">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.6453934114306!2d116.40660560000002!3d39.8821803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f04d6019ff91eb%3A0x372c15453b110e6a!2sTemple%20of%20Heaven!5e0!3m2!1sen!2sus!4v1682343541980!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Temple of Heaven</h4>
 		<p>This temple symbolizes the relationship between earth and heaven and is located in southern Beijing.
@@ -256,21 +280,21 @@
 <br>
 <div class = "row">
 	<div class = "1column">
-		<img src = "Images/China/YuGarden.jpg" alt = "Yu Garden" style = "height: 100% width: 100%">
+		<img src = "Images/China/YuGarden.jpg" alt = "Yu Garden">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3063.598219536182!2d116.25952900000001!3d39.838425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35f048c8ae402883%3A0x959c36ba7e579fed!2sYu%20Garden!5e0!3m2!1sen!2sus!4v1682343587153!5m2!1sen!2sus"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Yu Garden</h4>
 		<p>This garden was first built during the Ming dynasty and is surrounded by the city god temple and Yuyuan Bazaar.
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/China/ShanghaiMuseum.jpg" alt = "Shanghai Museum" style = "width: 75%">
+		<img src = "Images/China/ShanghaiMuseum.jpg" alt = "Shanghai Museum">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.725603773977!2d121.47552780000001!3d31.228330699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b270696d12653d%3A0x4d4c4e7bc3c8db6c!2sShanghai%20Museum!5e0!3m2!1sen!2sus!4v1682343621811!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Shanghai Museum</h4>
-		<p>This museum is considered China’s first world-class modern museum and contains rare cultural pieces. 
+		<p>This museum is considered China's first world-class modern museum and contains rare cultural pieces. 
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/China/PearlTVTower.jpg" alt = "Oriental Pearl TV Tower" style = "width: 75%">
+		<img src = "Images/China/PearlTVTower.jpg" alt = "Oriental Pearl TV Tower">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.315477323491!2d121.49975529999999!3d31.239688899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b270fb25b0d4db%3A0x163e9f3be2e08565!2sOriental%20Pearl%20TV%20Tower!5e0!3m2!1sen!2sus!4v1682343655646!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Oriental Pearl TV Tower</h4>
 		<p>This tower has 15 observational levels with the highest being 1,150 feet above ground.
@@ -282,21 +306,21 @@
 <br>
 <div class = "row">
 	<div class = "1column">
-		<img src = "Images/China/NanLianGarden.jpg" alt = "Nan Lian Garden" style = "height: 100% width: 100%">
+		<img src = "Images/China/NanLianGarden.jpg" alt = "Nan Lian Garden">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.3711264260164!2d114.2045149!3d22.339611399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340406c51bbb8503%3A0xef6bb4cc5b0b6ccf!2sNan%20Lian%20Garden!5e0!3m2!1sen!2sus!4v1682343699158!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Nan Lian Garden</h4>
 		<p>This Tang dynasty style garden was a joint project between Chi Lin Nunnery and the Hong Kong government built in 2006.
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/China/HongKongDisney.jpg" alt = "Hong Kong Disneyland" style = "width: 75%">
+		<img src = "Images/China/HongKongDisney.jpg" alt = "Hong Kong Disneyland">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14764.30386284286!2d114.03252716977538!3d22.31296660000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403fc2f53d3953d%3A0x35b3af6ce4475405!2sHong%20Kong%20Disneyland!5e0!3m2!1sen!2sus!4v1682343728721!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Hong Kong Disneyland</h4>
 		<p>This is the largest theme park in Hong Kong.
 		</p>
 	</div>
 	<div class = "1column">
-		<img src = "Images/China/TianTanBuddha.jpg" alt = "Tian Tan Buddha" style = "width: 75%">
+		<img src = "Images/China/TianTanBuddha.jpg" alt = "Tian Tan Buddha">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.6333841474893!2d113.904984!3d22.2539847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340158f66af64e31%3A0x4d0fe4264be5f070!2sTian%20Tan%20Buddha!5e0!3m2!1sen!2sus!4v1682343752397!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Tian Tan Buddha</h4>
 		<p>This bronze statue was built in 1993 and symbolizes the relationship between man and nature.
