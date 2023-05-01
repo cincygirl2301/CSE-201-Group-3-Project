@@ -1,3 +1,4 @@
+/* defines colors that will be used throughout */
 :root {
 	--topnav-color: #30a8a0;
 	--sidebar-color: #106860;
@@ -5,12 +6,13 @@
 	--active-color: #084838;
 }
 
+/* sets features for body */
 body {
 	background-image: url("airplanebackgroundimage.png");
-    background-repeat: repeat;
+	background-repeat: repeat;
 	overflow:auto;
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .CountryList {
@@ -19,24 +21,28 @@ body {
 	height: 100vh;
 }
 
+/* Column features */
 .column {
 	float: left;
 	width: 33.33%;
 	font-size: 0.75em;
 }
 
+/* Column features */
 .1column {
 	float: center;
 	width: 33.33%;
 	font-size: 0.75em;
 }
 
+/* Row features */
 .row::after {
 	content: "";
 	clear: both;
 	display: table;
 }
 
+/* Defines everything, image, and iframe */
 * {
     font-family: sans-serif-duo;
 }
@@ -51,6 +57,7 @@ iframe {
 	width: 450px;
 }
 
+/* Defines features for side bar with country list */
 #countryList {
   margin-top: 54px;
   padding: 0;
@@ -81,6 +88,7 @@ li a:hover:not(.active) {
   color: var(--text-color);
 }
 
+/* Defines features for top bar */
 .topnav {
   overflow: auto;
   position: fixed;
