@@ -28,13 +28,12 @@ body {
 	font-size: 0.75em;
 }
 
-/* Row features 
+/* Row features */
 .row::after {
 	content: "";
 	clear: both;
 	display: table;
 }
-*/
 
 /* Defines everything, image, and iframe */
 * {
