@@ -48,7 +48,6 @@ img {
 
 /* Defines every iframe's size */
 iframe {
-	float: right;
   height: 300px;
 	width: 450px;
 }
