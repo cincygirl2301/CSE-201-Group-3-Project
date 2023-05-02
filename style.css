@@ -23,13 +23,6 @@ body {
 
 /* Column features */
 .column {
-	float: left;
-	width: 33.33%;
-	font-size: 0.75em;
-}
-
-/* Column features */
-.1column {
 	float: center;
 	width: 33.33%;
 	font-size: 0.75em;
@@ -47,11 +40,13 @@ body {
     font-family: sans-serif-duo;
 }
 
+/* Defines every image's size */
 img {
 	height: 300px;
 	width: 450px;
 }
 
+/* Defines every iframe's size */
 iframe {
 	height: 300px;
 	width: 450px;
@@ -73,7 +68,7 @@ iframe {
 li a {
   display: block;
   color: var(--text-color);
-  font-size; 20px;
+  font-size: 20px;
   padding: 10px 50px;
   text-decoration: none;
 }
