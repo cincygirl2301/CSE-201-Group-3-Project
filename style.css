@@ -23,8 +23,6 @@ body {
 
 /* Column features */
 .column {
-	float: center;
-	width: 33.33%;
 	font-size: 0.75em;
 }
 
@@ -48,7 +46,8 @@ img {
 
 /* Defines every iframe's size */
 iframe {
-  height: 300px;
+  float: center;
+	height: 300px;
 	width: 450px;
 }
 
