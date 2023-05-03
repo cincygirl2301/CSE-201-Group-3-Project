@@ -4,190 +4,206 @@
 <head>
 <title>NetherlandsGuide</title>
 <!-- The chunk beginning here will be on every page -->
-        <link rel=stylesheet href="style.css">
-		<script>
-			function sortList() {
-				var continent = [
-					'<li><a href = "EgyptGuide.html">Egypt</a></li>',
-					'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
-					'<li><a href = "SouthAfricaGuide.html">South Africa</a></li>',
-					'<li><a href = "ChinaGuide.html">China</a></li>',
-					'<li><a href = "IndonesiaGuide.html">Indonesia</a></li>',
-					'<li><a href = "JapanGuide.html">Japan</a></li>',
-					'<li><a href = "KoreaGuide.html">Korea</a></li>',
-					'<li><a href = "MalaysiaGuide.html">Malaysia</a></li>',
-					'<li><a href = "SingaporeGuide.html">Singapore</a></li>',
-					'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>',
-					'<li><a href = "ThailandGuide.html">Thailand</a></li>',
-					'<li><a href = "TurkeyGuide.html">Turkey</a></li>',
-					'<li><a href = "AustraliaGuide.html">Australia</a></li>',
-					'<li><a href = "NewZealandGuide.html">New Zealand</a></li>',
-					'<li><a href = "CroatiaGuide.html">Croatia</a></li>',
-					'<li><a href = "EnglandGuide.html">England</a></li>',
-					'<li><a href = "FranceGuide.html">France</a></li>',
-					'<li><a href = "GreeceGuide.html">Greece</a></li>',
-					'<li><a href = "IrelandGuide.html">Ireland</a></li>',
-					'<li><a href = "ItalyGuide.html">Italy</a></li>',
-					'<li><a href = "GermanyGuide.html">Germany</a></li>',
-					'<li><a href = "NetherlandsGuide.html">Netherlands</a></li>',
-					'<li><a href = "SpainGuide.html">Spain</a></li>',
-					'<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>',
-					'<li><a href = "SwedenGuide.html">Sweden</a></li>',
-					'<li><a href = "CanadaGuide.html">Canada</a></li>',
-					'<li><a href = "JamaicaGuide.html">Jamaica</a></li>',
-					'<li><a href = "MexicoGuide.html">Mexico</a></li>',
-					'<li><a href = "BrazilGuide.html">Brazil</a></li>',
-					'<li><a href = "PeruGuide.html">Peru</a></li>'
-				].join('');
-				var price = [
-					'<li><a href = "AustraliaGuide.html">Australia</a></li>',
-					'<li><a href = "FranceGuide.html">France</a></li>',
-					'<li><a href = "EnglandGuide.html">England</a></li>',
-					'<li><a href = "ItalyGuide.html">Italy</a></li>',
-					'<li><a href = "MexicoGuide.html">Mexico</a></li>',
-					'<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>',
-					'<li><a href = "CanadaGuide.html">Canada</a></li>',
-					'<li><a href = "JamaicaGuide.html">Jamaica</a></li>',
-					'<li><a href = "NetherlandsGuide.html">Netherlands</a></li>',
-					'<li><a href = "NewZealandGuide.html">New Zealand</a></li>',
-					'<li><a href = "ChinaGuide.html">China</a></li>',
-					'<li><a href = "SingaporeGuide.html">Singapore</a></li>',
-					'<li><a href = "IrelandGuide.html">Ireland</a></li>',
-					'<li><a href = "GermanyGuide.html">Germany</a></li>',
-					'<li><a href = "SwedenGuide.html">Sweden</a></li>',
-					'<li><a href = "JapanGuide.html">Japan</a></li>',
-					'<li><a href = "GreeceGuide.html">Greece</a></li>',
-					'<li><a href = "KoreaGuide.html">Korea</a></li>',
-					'<li><a href = "BrazilGuide.html">Brazil</a></li>',
-					'<li><a href = "MalaysiaGuide.html">Malaysia</a></li>',
-					'<li><a href = "PeruGuide.html">Peru</a></li>',
-					'<li><a href = "CroatiaGuide.html">Croatia</a></li>',
-					'<li><a href = "IndonesiaGuide.html">Indonesia</a></li>',
-					'<li><a href = "ThailandGuide.html">Thailand</a></li>',
-					'<li><a href = "SouthAfricaGuide.html">South Africa</a></li>',
-					'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
-					'<li><a href = "TurkeyGuide.html">Turkey</a></li>',
-					'<li><a href = "SpainGuide.html">Spain</a></li>',
-					'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>',
-					'<li><a href = "EgyptGuide.html">Egypt</a></li>'
-				].join('');
-				var popularity = [
-					'<li><a href = "FranceGuide.html">France</a></li>',
-					'<li><a href = "SpainGuide.html">Spain</a></li>',
-					'<li><a href = "ChinaGuide.html">China</a></li>',
-					'<li><a href = "ItalyGuide.html">Italy</a></li>',
-					'<li><a href = "TurkeyGuide.html">Turkey</a></li>',
-					'<li><a href = "MexicoGuide.html">Mexico</a></li>',
-					'<li><a href = "ThailandGuide.html">Thailand</a></li>',
-					'<li><a href = "GermanyGuide.html">Germany</a></li>',
-					'<li><a href = "EnglandGuide.html">England</a></li>',
-					'<li><a href = "JapanGuide.html">Japan</a></li>',
-					'<li><a href = "GreeceGuide.html">Greece</a></li>',
-					'<li><a href = "MalaysiaGuide.html">Malaysia</a></li>',
-					'<li><a href = "CanadaGuide.html">Canada</a></li>',
-					'<li><a href = "NetherlandsGuide.html">Netherlands</a></li>',
-					'<li><a href = "KoreaGuide.html">Korea</a></li>',
-					'<li><a href = "CroatiaGuide.html">Croatia</a></li>',
-					'<li><a href = "IndonesiaGuide.html">Indonesia</a></li>',
-					'<li><a href = "BrazilGuide.html">Brazil</a></li>',
-					'<li><a href = "SingaporeGuide.html">Singapore</a></li>',
-					'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
-					'<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>',
-					'<li><a href = "EgyptGuide.html">Egypt</a></li>',
-					'<li><a href = "IrelandGuide.html">Ireland</a></li>',
-					'<li><a href = "SouthAfricaGuide.html">South Africa</a></li>',
-					'<li><a href = "AustraliaGuide.html">Australia</a></li>',
-					'<li><a href = "SwedenGuide.html">Sweden</a></li>',
-					'<li><a href = "JamaicaGuide.html">Jamaica</a></li>',
-					'<li><a href = "PeruGuide.html">Peru</a></li>',
-					'<li><a href = "NewZealandGuide.html">New Zealand</a></li>',
-					'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>'
-				].join('');
-				var element = document.getElementById("sorting");
-				var val = element.options[element.selectedIndex].value;
-				if (val == "continent") {
-					document.getElementById("countryList").innerHTML = continent;
-				} else if (val == "price") {
-					document.getElementById("countryList").innerHTML = price;
-				} else if (val == "popularity") {
-					document.getElementById("countryList").innerHTML = popularity;
-				}
+<link rel=stylesheet href="style.css">
+<script>
+
+	// Javascript function for our sorting mechanic
+	function sortList() {
+
+		// Sorts country web page list in order of continents
+		var continent = [
+			'<li><a href = "EgyptGuide.html">Egypt</a></li>',
+			'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
+			'<li><a href = "SouthAfricaGuide.html">South Africa</a></li>',
+			'<li><a href = "ChinaGuide.html">China</a></li>',
+			'<li><a href = "IndonesiaGuide.html">Indonesia</a></li>',
+			'<li><a href = "JapanGuide.html">Japan</a></li>',
+			'<li><a href = "KoreaGuide.html">Korea</a></li>',
+			'<li><a href = "MalaysiaGuide.html">Malaysia</a></li>',
+			'<li><a href = "SingaporeGuide.html">Singapore</a></li>',
+			'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>',
+			'<li><a href = "ThailandGuide.html">Thailand</a></li>',
+			'<li><a href = "TurkeyGuide.html">Turkey</a></li>',
+			'<li><a href = "AustraliaGuide.html">Australia</a></li>',
+			'<li><a href = "NewZealandGuide.html">New Zealand</a></li>',
+			'<li><a href = "CroatiaGuide.html">Croatia</a></li>',
+			'<li><a href = "EnglandGuide.html">England</a></li>',
+			'<li><a href = "FranceGuide.html">France</a></li>',
+			'<li><a href = "GreeceGuide.html">Greece</a></li>',
+			'<li><a href = "IrelandGuide.html">Ireland</a></li>',
+			'<li><a href = "ItalyGuide.html">Italy</a></li>',
+			'<li><a href = "GermanyGuide.html">Germany</a></li>',
+			'<li><a href = "NetherlandsGuide.html">Netherlands</a></li>',
+			'<li><a href = "SpainGuide.html">Spain</a></li>',
+			'<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>',
+			'<li><a href = "SwedenGuide.html">Sweden</a></li>',
+			'<li><a href = "CanadaGuide.html">Canada</a></li>',
+			'<li><a href = "JamaicaGuide.html">Jamaica</a></li>',
+			'<li><a href = "MexicoGuide.html">Mexico</a></li>',
+			'<li><a href = "BrazilGuide.html">Brazil</a></li>',
+			'<li><a href = "PeruGuide.html">Peru</a></li>'
+		].join('');
+
+		// Sorts country web page list in order of most to least expensive to visit
+		var price = [
+			'<li><a href = "AustraliaGuide.html">Australia</a></li>',
+			'<li><a href = "FranceGuide.html">France</a></li>',
+			'<li><a href = "EnglandGuide.html">England</a></li>',
+			'<li><a href = "ItalyGuide.html">Italy</a></li>',
+			'<li><a href = "MexicoGuide.html">Mexico</a></li>',
+			'<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>',
+			'<li><a href = "CanadaGuide.html">Canada</a></li>',
+			'<li><a href = "JamaicaGuide.html">Jamaica</a></li>',
+			'<li><a href = "NetherlandsGuide.html">Netherlands</a></li>',
+			'<li><a href = "NewZealandGuide.html">New Zealand</a></li>',
+			'<li><a href = "ChinaGuide.html">China</a></li>',
+			'<li><a href = "SingaporeGuide.html">Singapore</a></li>',
+			'<li><a href = "IrelandGuide.html">Ireland</a></li>',
+			'<li><a href = "GermanyGuide.html">Germany</a></li>',
+			'<li><a href = "SwedenGuide.html">Sweden</a></li>',
+			'<li><a href = "JapanGuide.html">Japan</a></li>',
+			'<li><a href = "GreeceGuide.html">Greece</a></li>',
+			'<li><a href = "KoreaGuide.html">Korea</a></li>',
+			'<li><a href = "BrazilGuide.html">Brazil</a></li>',
+			'<li><a href = "MalaysiaGuide.html">Malaysia</a></li>',
+			'<li><a href = "PeruGuide.html">Peru</a></li>',
+			'<li><a href = "CroatiaGuide.html">Croatia</a></li>',
+			'<li><a href = "IndonesiaGuide.html">Indonesia</a></li>',
+			'<li><a href = "ThailandGuide.html">Thailand</a></li>',
+			'<li><a href = "SouthAfricaGuide.html">South Africa</a></li>',
+			'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
+			'<li><a href = "TurkeyGuide.html">Turkey</a></li>',
+			'<li><a href = "SpainGuide.html">Spain</a></li>',
+			'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>',
+			'<li><a href = "EgyptGuide.html">Egypt</a></li>'
+		].join('');
+		
+		// Sorts country web page list in order of most to least popular
+		var popularity = [
+			'<li><a href = "FranceGuide.html">France</a></li>',
+			'<li><a href = "SpainGuide.html">Spain</a></li>',
+			'<li><a href = "ChinaGuide.html">China</a></li>',
+			'<li><a href = "ItalyGuide.html">Italy</a></li>',
+			'<li><a href = "TurkeyGuide.html">Turkey</a></li>',
+			'<li><a href = "MexicoGuide.html">Mexico</a></li>',
+			'<li><a href = "ThailandGuide.html">Thailand</a></li>',
+			'<li><a href = "GermanyGuide.html">Germany</a></li>',
+			'<li><a href = "EnglandGuide.html">England</a></li>',
+			'<li><a href = "JapanGuide.html">Japan</a></li>',
+			'<li><a href = "GreeceGuide.html">Greece</a></li>',
+			'<li><a href = "MalaysiaGuide.html">Malaysia</a></li>',
+			'<li><a href = "CanadaGuide.html">Canada</a></li>',
+			'<li><a href = "NetherlandsGuide.html">Netherlands</a></li>',
+			'<li><a href = "KoreaGuide.html">Korea</a></li>',
+			'<li><a href = "CroatiaGuide.html">Croatia</a></li>',
+			'<li><a href = "IndonesiaGuide.html">Indonesia</a></li>',
+			'<li><a href = "BrazilGuide.html">Brazil</a></li>',
+			'<li><a href = "SingaporeGuide.html">Singapore</a></li>',
+			'<li><a href = "MoroccoGuide.html">Morocco</a></li>',
+			'<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>',
+			'<li><a href = "EgyptGuide.html">Egypt</a></li>',
+			'<li><a href = "IrelandGuide.html">Ireland</a></li>',
+			'<li><a href = "SouthAfricaGuide.html">South Africa</a></li>',
+			'<li><a href = "AustraliaGuide.html">Australia</a></li>',
+			'<li><a href = "SwedenGuide.html">Sweden</a></li>',
+			'<li><a href = "JamaicaGuide.html">Jamaica</a></li>',
+			'<li><a href = "PeruGuide.html">Peru</a></li>',
+			'<li><a href = "NewZealandGuide.html">New Zealand</a></li>',
+			'<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>'
+		].join('');
+		var element = document.getElementById("sorting");
+		var val = element.options[element.selectedIndex].value;
+		if (val == "continent") {
+			document.getElementById("countryList").innerHTML = continent;
+		} else if (val == "price") {
+			document.getElementById("countryList").innerHTML = price;
+		} else if (val == "popularity") {
+			document.getElementById("countryList").innerHTML = popularity;
+		}
+	}
+	
+	// Javascript variable that contains list of countries
+	var countries = ["Australia", "Brazil", "Canada", "China", "Croatia","England","Egypt","France","Greece","Indonesia","Ireland","Italy","Germany","Jamaica","Japan","Korea","Mexico","Morocco","Netherlands","New Zealand","Peru","Singapore","South Africa","Spain","Sri Lanka","Switzerland","Sweden","Thailand","Turkey"];
+
+	// Javascript function for our search bar
+	function search() {
+		var input = document.getElementById("searchbar").value;
+		var found = false;
+
+		for (var i = 0; i < countries.length; i++) {
+			if (input.toLowerCase() == countries[i].toLowerCase()) {
+				window.location.href = countries[i] + "Guide.html";
+				found = true;
+				break;
 			}
-			
-			var countries = ["Australia", "Brazil", "Canada", "China", "Croatia","England","Egypt","France","Greece","Indonesia","Ireland","Italy","Germany","Jamaica","Japan","Korea","Mexico","Morocco","Netherlands","New Zealand","Peru","Singapore","South Africa","Spain","Sri Lanka","Switzerland","Sweden","Thailand","Turkey"];
+		}
 
-            function search() {
-            var input = document.getElementById("searchbar").value;
-            var found = false;
-
-            for (var i = 0; i < countries.length; i++) {
-            if (input.toLowerCase() == countries[i].toLowerCase()) {
-            window.location.href = countries[i] + "Guide.html";
-            found = true;
-            break;
-            }
-            }
-
-            if (!found) {
-            alert("Invalid input, please enter a correct name!");
-            }
-            }
-		</script>
+		// If user input is not found, user is alerted
+		if (!found) {
+			alert("Invalid input, please enter a correct name!");
+		}
+	}
+</script>
 </head>
 <body>
-	<ul id="countryList">
-		<li><a href = "AustraliaGuide.html">Australia</a></li>
-		<li><a href = "BrazilGuide.html">Brazil</a></li>
-		<li><a href = "CanadaGuide.html">Canada</a></li>
-		<li><a href = "ChinaGuide.html">China</a></li>
-		<li><a href = "CroatiaGuide.html">Croatia</a></li>
-		<li><a href = "EnglandGuide.html">England</a></li>
-		<li><a href = "EgyptGuide.html">Egypt</a></li>
-		<li><a href = "FranceGuide.html">France</a></li>
-		<li><a href = "GreeceGuide.html">Greece</a></li>
-		<li><a href = "IndonesiaGuide.html">Indonesia</a></li>
-		<li><a href = "IrelandGuide.html">Ireland</a></li>
-		<li><a href = "ItalyGuide.html">Italy</a></li>
-		<li><a href = "GermanyGuide.html">Germany</a></li>
-		<li><a href = "JamaicaGuide.html">Jamaica</a></li>
-		<li><a href = "JapanGuide.html">Japan</a></li>
-		<li><a href = "KoreaGuide.html">Korea</a></li>
-		<li><a href = "MalaysiaGuide.html">Malaysia</a></li>
-		<li><a href = "MexicoGuide.html">Mexico</a></li>
-		<li><a href = "MoroccoGuide.html">Morocco</a></li>
-		<li><a href = "NetherlandsGuide.html">Netherlands</a></li>
-		<li><a href = "NewZealandGuide.html">New Zealand</a></li>
-		<li><a href = "PeruGuide.html">Peru</a></li>
-		<li><a href = "SingaporeGuide.html">Singapore</a></li>
-		<li><a href = "SouthAfricaGuide.html">South Africa</a></li>
-		<li><a href = "SpainGuide.html">Spain</a></li>
-		<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>
-		<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>
-		<li><a href = "SwedenGuide.html">Sweden</a></li>
-		<li><a href = "ThailandGuide.html">Thailand</a></li>
-		<li><a href = "TurkeyGuide.html">Turkey</a></li>
-	</ul>
-	<div class="topnav">
-		<button onclick="sortList()">Sort by</button>
-		<select name="sorting" id="sorting">
-			<option value="continent">Continent</option>
-			<option value="price">Price</option>
-			<option value="popularity">Popularity</option>
-		</select>
-		<a class="active" href="TravelGuide.html">Home</a>
-		<a href="About.html">About</a>
-		<div class="search-container">
-			<form action="javascript:void(0);" id="search">
-				<button type="button" onclick="search()">Search</button>
-				<input type="text" placeholder="Enter a country name" name="search-input" id="searchbar" onkeypress="if(event.keyCode==13){search();}">
-			</form>
-		</div>
-	</div>
-	<!-- The chunk that will be on every page ends here -->
+
+<!-- Unordered list of links to different country web pages -->
+<ul id="countryList">
+<li><a href = "AustraliaGuide.html">Australia</a></li>
+<li><a href = "BrazilGuide.html">Brazil</a></li>
+<li><a href = "CanadaGuide.html">Canada</a></li>
+<li><a href = "ChinaGuide.html">China</a></li>
+<li><a href = "CroatiaGuide.html">Croatia</a></li>
+<li><a href = "EnglandGuide.html">England</a></li>
+<li><a href = "EgyptGuide.html">Egypt</a></li>
+<li><a href = "FranceGuide.html">France</a></li>
+<li><a href = "GreeceGuide.html">Greece</a></li>
+<li><a href = "IndonesiaGuide.html">Indonesia</a></li>
+<li><a href = "IrelandGuide.html">Ireland</a></li>
+<li><a href = "ItalyGuide.html">Italy</a></li>
+<li><a href = "GermanyGuide.html">Germany</a></li>
+<li><a href = "JamaicaGuide.html">Jamaica</a></li>
+<li><a href = "JapanGuide.html">Japan</a></li>
+<li><a href = "KoreaGuide.html">Korea</a></li>
+<li><a href = "MalaysiaGuide.html">Malaysia</a></li>
+<li><a href = "MexicoGuide.html">Mexico</a></li>
+<li><a href = "MoroccoGuide.html">Morocco</a></li>
+<li><a href = "NetherlandsGuide.html">Netherlands</a></li>
+<li><a href = "NewZealandGuide.html">New Zealand</a></li>
+<li><a href = "PeruGuide.html">Peru</a></li>
+<li><a href = "SingaporeGuide.html">Singapore</a></li>
+<li><a href = "SouthAfricaGuide.html">South Africa</a></li>
+<li><a href = "SpainGuide.html">Spain</a></li>
+<li><a href = "SriLankaGuide.html">Sri Lanka</a></li>
+<li><a href = "SwitzerlandGuide.html">Switzerland</a></li>
+<li><a href = "SwedenGuide.html">Sweden</a></li>
+<li><a href = "ThailandGuide.html">Thailand</a></li>
+<li><a href = "TurkeyGuide.html">Turkey</a></li>
+</ul>
+
+<!-- Navigation bar that holds the sort button, home and about buttons, and search bar -->
+<div class="topnav">
+<button onclick="sortList()">Sort by</button>
+<select name="sorting" id="sorting">
+	<option value="continent">Continent</option>
+	<option value="price">Price</option>
+	<option value="popularity">Popularity</option>
+</select>
+<a class="active" href="TravelGuide.html">Home</a>
+<a href="About.html">About</a>
+<div class="search-container">
+	<form action="javascript:void(0);" id="search">
+		<button type="button" onclick="search()">Search</button>
+		<input type="text" placeholder="Enter a country name" name="search-input" id="searchbar" onkeypress="if(event.keyCode==13){search();}">
+	</form>
+</div>
+</div>
+<!-- The chunk that will be on every page ends here -->
 
 <div style="margin-left:25%;margin-top: 47px;position:fixed;padding:1px 16px; height: 90%;overflow:auto;">
 <div class = "CountryList">
 
+	<!-- Paragraph contains facts of above mentioned country -->
 	<h1>Some Facts about Country</h1>
 	<p>The Netherlands is a small country located in Western Europe, bordered by Germany to the east, 
 		Belgium to the south, and the North Sea to the west and north. The country has a population of 
@@ -198,6 +214,10 @@
 		The country is also known for its progressive social policies, including legalized same-sex marriage.
 	</p>
 	
+	<!-- 
+		Section of unordered lists about average amount of money 
+		spent by tourists in respective cities and  budget ranges 
+	-->
 	<p><strong>Average Amount of Money Spent By Tourists</strong></p>
 	<p>Amsterdam</p>
 	<ul>
@@ -218,20 +238,27 @@
 		<li>High-Range: $304 / day per person</li>
 	</ul>
 
-	<h1>Popular Cities in The Netherlands</h1>
+	<!-- Popular cities and attractions section -->
+<h1>Popular Cities in The Netherlands</h1>
 <br>
 <h3>Places to Visit in Amsterdam</h3>
 <br>
 <div class = "row">
-	<div class = "1column">
+	
+	<!-- Div that formats attraction image in center of page -->
+	<div class = "column">
+		
+		<!-- Displays image of attraction -->
 		<img src = "Images/Netherlands/Rijksmuseum.jpg" alt = "Rijksmuseum">
+		
+		<!-- Displays google map location of attraction -->
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.57475027097!2d4.8852188!3d52.3599976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609eec1bb16e5%3A0xd54373ae6a408585!2sRijksmuseum!5e0!3m2!1sen!2sus!4v1682347623817!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		<h4>Rijksmuseum</h4>
         <p>This museum is dedicated to Dutch art and history with a collection of about 
 			1 million objects.
 		</p>
 	</div>
-	<div class = "1column">
+	<div class = "column">
 		<img src = "Images/Netherlands/AnneFrankHouse.jpg" alt = "Anne Frank House">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.735373307881!2d4.8839765!3d52.3752182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c5213e1149%3A0xd49a5d653e635b0a!2sAnne%20Frank%20House!5e0!3m2!1sen!2sus!4v1682347650010!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h4>Anne Frank House</h4>
@@ -239,7 +266,7 @@
 			persecution with her family.
 		</p>
 	</div>
-	<div class = "1column">
+	<div class = "column">
 		<img src = "Images/Netherlands/VanGoghMuseum.jpg" alt = "Van Gogh Museum">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.661967098246!2d4.8810756!3d52.3584159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609ef96d35a5f%3A0xc22828aef97cc51a!2sVan%20Gogh%20Museum!5e0!3m2!1sen!2sus!4v1682347681553!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h4>Van Gogh Museum</h4>
@@ -252,7 +279,7 @@
 <h3>Places to Visit in Rotterdam</h3>
 <br>
 <div class = "row">
-	<div class = "1column">
+	<div class = "column">
 		<img src = "Images/Netherlands/BojimansvanMuseum.jpg" alt = "Museum Boijmans-van Beuningen">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.082028674329!2d4.471152017443847!3d51.914214500000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c4349f744d00bd%3A0x7c8c657a788cdb98!2sMuseum%20Boijmans%20Van%20Beuningen!5e0!3m2!1sen!2sus!4v1682347722371!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h4>Museum Boijmans-van Beuningen</h4>
@@ -260,7 +287,7 @@
 			artworks that have been collected over 170 years.
 		</p>
 	</div>
-	<div class = "1column">
+	<div class = "column">
 		<img src = "Images/Netherlands/CubeHouse.jpg" alt = "Cube Houses">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2460.7546396795715!2d4.490574700000001!3d51.920187500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c43343557fef99%3A0x56d0b49d94f1a5be!2sCube%20Houses!5e0!3m2!1sen!2sus!4v1682347756889!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h4>Cube Houses</h4>
@@ -268,7 +295,7 @@
 			to the architect Piet Blom.
 		</p>
 	</div>
-	<div class = "1column">
+	<div class = "column">
 		<img src = "Images/Netherlands/Euromast.jpg" alt = "Euromast">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2461.562709804918!2d4.4666374!3d51.9054439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c4349b2eda8e4d%3A0x58a81783a14f3ad8!2sEuromast!5e0!3m2!1sen!2sus!4v1682347780861!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h4>Euromast</h4>
@@ -279,7 +306,7 @@
 <h3>Places to Visit in The Hague</h3>
 <br>
 <div class = "row">
-	<div class = "1column">
+	<div class = "column">
 		<img src = "Images/Netherlands/ThePier.jpg" alt = "The Pier">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.020422218815!2d4.2827111!3d52.1157572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5ba097854f957%3A0x83e6ec574cc11686!2sDe%20Pier!5e0!3m2!1sen!2sus!4v1682347805638!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h4>The Pier</h4>
@@ -287,7 +314,7 @@
 			like a zipline and ferris wheel.
 		</p>
 	</div>
-	<div class = "1column">
+	<div class = "column">
 		<img src = "Images/Netherlands/PeacePalace.jpg" alt = "Peace Palace">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.6038121891697!2d4.2954650999999995!3d52.0869417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b0cb569ccd71%3A0x449438d6c1965856!2sPeace%20Palace!5e0!3m2!1sen!2sus!4v1682347830332!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h4>Peace Palace</h4>
